@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      body {
+        background-color: #f4d04e;
+      }
+
+      @font-face {
+        font-family: Figtree;
+        src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+      }
+
+      .blogBox {
+        width: 360px;
+        height: fit-content;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border: 1px solid var(--Black, #111);
+        border-radius: 20px;
+        background: var(--Pure-White, #fff);
+        box-shadow: 8px 8px 0px 0px #000;
+      }
+
+      .blogBox:hover {
+        cursor: url("./assets/images/cursor-ponter.svg"), pointer;
+        box-shadow: 16px 16px 0px 0px #000;
+      }
+
+      .image-class {
+        width: 100%;
+        height: fit-content;
+        border-radius: 10px;
+        background: var(--Yellow, #f4d04e);
+      }
+
+      .blog-info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .userInfo {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .profile-image {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+      }
+
+      .user-name {
+        color: var(--Black, #111);
+        font-family: Figtree;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%;
+      }
+
+      .user-data {
+        color: var(--Grey, #7f7f7f);
+        font-family: Figtree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      .category {
+        width: 19%;
+        padding: 4px 12px;
+        border-radius: 4px;
+        background: var(--Yellow, #f4d04e);
+      }
+
+      .blog-info-heading {
+        font-size: 24px;
+      }
+
+      .blogBox:hover .blog-info-heading {
+        color: var(--Yellow, #f4d04e);
+      }
+
+      @media only screen and (max-width: 375px) {
+        .blogBox {
+          width: fit-content;
+          margin-left: 24px;
+          margin-right: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blog-content-section" class="blogBox">
+      <div id="blog-article-section">
+        <img
+          class="image-class"
+          src="./assets/images/illustration-article.svg"
+          alt="article-image"
+        />
+      </div>
+      <div id="blog-info-section" class="blog-info">
+        <div id="category" class="category user-name">Learning</div>
+        <div id="publication-date" class="user-name;font-weight:500">
+          Published 21 Dec 2023
+        </div>
+        <div id="blog-info-heading" class="blog-info-heading user-name">
+          HTML &#38; CSS foundations
+        </div>
+        <div id="blog-data-sections" class="user-data">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </div>
+      </div>
+      <div id="user-section" class="userInfo">
+        <div id="user-image">
+          <img
+            class="profile-image"
+            src="./assets/images/image-avatar.webp"
+            alt="user Profile image"
+          />
+        </div>
+        <div id="user-name" class="user-name">Greg Hooper</div>
+      </div>
+    </div>
+  </body>
+</html>
